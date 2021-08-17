@@ -68,7 +68,7 @@ def delete_city(name):
     db.session.delete(city)
     db.session.commit()
 
-    flash(f'Successfully delete { city.name }', 'success')
+    flash(f'Successfully deleted { city.name }', 'success')
     return redirect(url_for('index_get'))
 
 if __name__ == '__main__':
