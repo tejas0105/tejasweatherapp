@@ -34,7 +34,7 @@ def index_get():
             'icon': response['weather'][0]['icon'],
         }
     # print(weather)
-        weather_data.append(weather)
+        weather_data.insert(0,weather)
     return render_template('weather.html',weather_data = weather_data)
 
 @app.route('/', methods = ['POST'])
